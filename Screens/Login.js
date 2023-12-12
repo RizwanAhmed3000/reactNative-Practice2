@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TextInput, Button } from 'react-native'
+import { View, Text, StyleSheet, TextInput, Button, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import { auth, signInWithEmailAndPassword } from '../FirebaseConfig/Config.js';
 
@@ -27,7 +27,11 @@ const Login = () => {
             {/* <StatusBar style="auto" /> */}
             <TextInput placeholder='Email' keyboardType='email-address' style={styles.inputField} onChangeText={setEmail} />
             <TextInput placeholder='Password' secureTextEntry={true} style={styles.inputField} onChangeText={setPassword} />
-            <Button title='Log In' color="orange" style={styles.btn} />
+            <TouchableOpacity style={styles.btn}>
+                <Text style={styles.text}>
+                    Log in
+                </Text>
+            </TouchableOpacity>
             {/* <Button title='Log in' style={styles.btn} onPress={navigateTo} /> */}
         </View>
     )
@@ -43,14 +47,19 @@ const styles = StyleSheet.create({
     inputField: {
         marginVertical: 10,
         borderWidth: 1,
-        width: "50%",
+        width: "80%",
         padding: 5,
         borderRadius: 5,
     },
     btn: {
-        width: "50%",
+        width: "80%",
         marginTop: 10,
         borderRadius: 5,
+        marginBottom: 10,
+        backgroundColor: "orange",
+        padding: 10,
+        display: "flex",
+        alignItems: "center",
     },
     heading: {
         fontWeight: "900",
@@ -61,7 +70,14 @@ const styles = StyleSheet.create({
         fontWeight: "300",
         fontSize: 16,
         color: "orange"
-    }
+    },
+    text: {
+        fontSize: 16,
+        lineHeight: 21,
+        fontWeight: 'bold',
+        letterSpacing: 0.25,
+        color: 'white',
+    },
 });
 
 export default Login
