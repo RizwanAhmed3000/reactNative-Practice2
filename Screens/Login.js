@@ -1,5 +1,7 @@
 import { View, Text, StyleSheet, TextInput, Button } from 'react-native'
 import React, { useState } from 'react'
+import { auth, signInWithEmailAndPassword } from '../FirebaseConfig/Config.js';
+
 
 const Login = () => {
     const [email, setEmail] = useState('');

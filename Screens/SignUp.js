@@ -8,7 +8,7 @@ const SignUp = ({ navigation }) => {
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    function siguUpHandler() {
+    function signUpHandler() {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed up 
@@ -37,7 +37,7 @@ const SignUp = ({ navigation }) => {
             {/* <StatusBar style="auto" /> */}
             <TextInput placeholder='Email' keyboardType='email-address' style={styles.inputField} onChangeText={setEmail} />
             <TextInput placeholder='Password' secureTextEntry={true} style={styles.inputField} onChangeText={setPassword} />
-            <Button title='sign up' color="orange" style={styles.btn} onPress={siguUpHandler} />
+            <Button title='sign up' color="orange" style={styles.btn} onPress={signUpHandler} />
             <Button title='Log in' color="orange" style={styles.btn} onPress={navigateTo} />
         </View>
     )
