@@ -20,7 +20,7 @@ export default function App() {
       </GestureHandlerRootView> */}
       <NavigationContainer>
         <SafeAreaView style={{ flex: 1 }}>
-          {/* <StatusBar style="auto" /> */}
+          <StatusBar style="auto" />
           <Stack.Navigator initialRouteName='Splash' screenOptions={{
             animation: "slide_from_right",
             headerShown: false
