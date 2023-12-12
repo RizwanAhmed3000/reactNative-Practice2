@@ -1,7 +1,8 @@
-import { SafeAreaView, View, StatusBar } from 'react-native';
+import { View, StatusBar } from 'react-native';
 import SignUp from './Screens/SignUp';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Login from './Screens/Login';
 import Splash from './Screens/Splash';
 import Onboarding from './Screens/Onboarding';
@@ -19,7 +20,7 @@ export default function App() {
       </GestureHandlerRootView> */}
       <NavigationContainer>
         <SafeAreaView style={{ flex: 1 }}>
-          <StatusBar animated={true} barStyle={'default'} showHideTransition={'slide'} />
+          {/* <StatusBar style="auto" /> */}
           <Stack.Navigator initialRouteName='Splash' screenOptions={{
             animation: "slide_from_right",
             headerShown: false

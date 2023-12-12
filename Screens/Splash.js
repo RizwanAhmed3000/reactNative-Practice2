@@ -6,7 +6,7 @@ const Splash = ({navigation}) => {
     useEffect(()=>{
         const timeOut = setTimeout(()=>{
             navigation.navigate('Onboarding')
-        }, 1000)
+        }, 5000)
 
         return ()=> clearTimeout(timeOut)
     },[navigation])
