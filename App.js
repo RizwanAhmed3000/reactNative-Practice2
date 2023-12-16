@@ -1,4 +1,4 @@
-import 'react-native-gesture-handler';
+// import 'react-native-gesture-handler';
 import { View, StatusBar } from 'react-native';
 import SignUp from './Screens/SignUp';
 import { NavigationContainer } from '@react-navigation/native';
@@ -10,7 +10,7 @@ import Onboarding from './Screens/Onboarding';
 import Onboarding2 from './Screens/Onboarding2';
 import Onboarding3 from './Screens/Onboarding3';
 import Home from './Screens/Home';
-import MyDrawer from './navigation/Drawer.js';
+// import MyDrawer from './navigation/Drawer.js';
 // import { StatusBar } from 'expo-status-bar';
 
 const Stack = createNativeStackNavigator();
@@ -36,7 +36,7 @@ export default function App() {
             <Stack.Screen name='Login' component={Login} options={{ headerShown: true, title: "Login In" }} />
             <Stack.Screen name='Home' component={Home} options={{ headerShown: false, title: "Home" }} />
           </Stack.Navigator>
-          <MyDrawer />
+          {/* <MyDrawer /> */}
         </SafeAreaView>
       </NavigationContainer >
     </>
