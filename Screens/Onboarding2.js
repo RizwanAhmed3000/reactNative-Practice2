@@ -14,7 +14,7 @@ const Onboarding2 = ({navigation}) => {
 
     return (
         <View style={styles.container}>
-            <Image source={require('../assets/Travelers-pana.png')} style={{ width: 400, height: 400 }} />
+            <Image source={require('../assets/Travelers-pana.png')} style={{ width: 300, height: 300 }} />
             <Text style={styles.heading}>Tour place</Text>
             <View style={styles.para}>
                 <Text style={styles.textLo}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</Text>

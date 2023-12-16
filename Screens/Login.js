@@ -3,15 +3,19 @@ import React, { useState } from 'react'
 import { auth, signInWithEmailAndPassword } from '../FirebaseConfig/Config.js';
 
 
-const Login = () => {
+const Login = ({ navigation }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     function loginHandler() {
+        console.log('login handler working')
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
+                if(user){
+                    navigation.navigate('Home')
+                }
                 // ...
             })
             .catch((error) => {
@@ -27,7 +31,7 @@ const Login = () => {
             {/* <StatusBar style="auto" /> */}
             <TextInput placeholder='Email' keyboardType='email-address' style={styles.inputField} onChangeText={setEmail} />
             <TextInput placeholder='Password' secureTextEntry={true} style={styles.inputField} onChangeText={setPassword} />
-            <TouchableOpacity style={styles.btn}>
+            <TouchableOpacity style={styles.btn} onPress={loginHandler}>
                 <Text style={styles.text}>
                     Log in
                 </Text>
