@@ -1,27 +1,35 @@
-import { View, Text, StyleSheet, TextInput } from 'react-native'
+import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
 import { Ionicons } from 'react-native-vector-icons'
 import React from 'react'
 
 const SearchBar = () => {
     return (
-        <View style={{backgroundColor: "pink", display: "flex", flexDirection: "row", width: "auto"}}>
+        <View style={styles.searchContainer}>
             <TextInput
                 style={styles.input}
                 placeholder="Search"
             />
-            <Ionicons name='time' size={20} style={{ marginRight: 6 }} />
+            <TouchableOpacity>
+                <Ionicons name='search' size={20} />
+            </TouchableOpacity>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
+    searchContainer: {
+        backgroundColor: "white", 
+        display: "flex", 
+        flexDirection: "row", 
+        alignItems: "center"
+    },
     input: {
         height: 40,
-        width: "100%",
+        width: "85%",
         margin: 12,
         borderWidth: 1,
         padding: 10,
-        borderRadius: 5,
+        borderRadius: 50,
     },
 })
 
